@@ -21,7 +21,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
@@ -107,8 +107,6 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libtinycompress \
     libvolumelistener \
-    libtinycompress \
-    libtinycompress.vendor \
     tinymix
 
 PRODUCT_COPY_FILES += \
@@ -135,7 +133,6 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libldacBT_bco \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
@@ -163,7 +160,6 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libxml2 \
     vendor.qti.hardware.camera.device@1.0.vendor \
-    Snap
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -176,12 +172,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.context_hub.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.context_hub.xml
-
-# CNE
-PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne \
-    services-ext
 
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
@@ -218,7 +208,7 @@ PRODUCT_PACKAGES += \
 # Doze
 PRODUCT_PACKAGES += \
     RealmeDoze \
-    devicesettings
+    RealmeParts
 
 # Dolby
 PRODUCT_COPY_FILES += \
@@ -235,8 +225,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.RMX1931 \
-    android.hardware.biometrics.fingerprint@2.3.vendor \
-    vendor.oplus.hardware.biometrics.fingerprint@2.1
+    android.hardware.biometrics.fingerprint@2.3.vendor
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
@@ -272,8 +261,6 @@ PRODUCT_PACKAGES += \
     gnss@2.0-xtwifi-inet-agent.policy
 
 PRODUCT_PACKAGES += \
-    libloc_net_iface \
-    liblocdiagiface \
     libbatching \
     libgeofencing \
     libgnss
@@ -334,7 +321,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.RMX1931 \
+    android.hardware.lights-service.RMX1931 \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -547,10 +534,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
@@ -607,8 +590,6 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
-    libdisplayconfig.vendor \
     libnl \
     libqdMetaData \
     libqdMetaData.system \
-    libqdMetaData.vendor

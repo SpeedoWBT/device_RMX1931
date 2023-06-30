@@ -15,8 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_RMX1931.mk
-
-COMMON_LUNCH_CHOICES := \
-    aosp_RMX1931-userdebug \
-    aosp_RMX1931-eng
+    $(LOCAL_DIR)/bliss_RMX1931.mk
